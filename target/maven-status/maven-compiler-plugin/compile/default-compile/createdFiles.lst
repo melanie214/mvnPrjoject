@@ -1,0 +1,4 @@
+com/promineotech/mvnProject/App.class
+com/promineotech/mvnProject/repository/LibraryRepository.class
+com/promineotech/mvnProject/entity/Book.class
+com/promineotech/mvnProject/service/BooksService.class
