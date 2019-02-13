@@ -4,14 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.promineotech.mvnProject.entity.Book;
-import com.promineotech.mvnProject.repository.LibraryRepository;
+import com.promineotech.mvnProject.repository.BookRepository;
 
 @Service 
 public class BooksService {
 	
 	
 	@Autowired
-	LibraryRepository repo; 
+	BookRepository repo; 
 	
 	public Book getBook(Long id) {
 		return repo.findOne(id);

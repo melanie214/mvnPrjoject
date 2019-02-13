@@ -1,4 +1,9 @@
-/Users/school/eclipse-workspace/mvnProject/src/main/java/com/promineotech/mvnProject/repository/LibraryRepository.java
+/Users/school/eclipse-workspace/mvnProject/src/main/java/com/promineotech/mvnProject/repository/AuthorRepository.java
+/Users/school/eclipse-workspace/mvnProject/src/main/java/com/promineotech/mvnProject/entity/Author.java
 /Users/school/eclipse-workspace/mvnProject/src/main/java/com/promineotech/mvnProject/service/BooksService.java
+/Users/school/eclipse-workspace/mvnProject/src/main/java/com/promineotech/mvnProject/service/AuthorsService.java
+/Users/school/eclipse-workspace/mvnProject/src/main/java/com/promineotech/mvnProject/controllers/AuthorController.java
+/Users/school/eclipse-workspace/mvnProject/src/main/java/com/promineotech/mvnProject/repository/BookRepository.java
 /Users/school/eclipse-workspace/mvnProject/src/main/java/com/promineotech/mvnProject/App.java
 /Users/school/eclipse-workspace/mvnProject/src/main/java/com/promineotech/mvnProject/entity/Book.java
+/Users/school/eclipse-workspace/mvnProject/src/main/java/com/promineotech/mvnProject/controllers/BooksController.java

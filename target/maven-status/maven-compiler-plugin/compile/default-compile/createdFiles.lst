@@ -1,4 +1,9 @@
 com/promineotech/mvnProject/App.class
-com/promineotech/mvnProject/repository/LibraryRepository.class
+com/promineotech/mvnProject/repository/AuthorRepository.class
 com/promineotech/mvnProject/entity/Book.class
+com/promineotech/mvnProject/controllers/AuthorController.class
 com/promineotech/mvnProject/service/BooksService.class
+com/promineotech/mvnProject/repository/BookRepository.class
+com/promineotech/mvnProject/entity/Author.class
+com/promineotech/mvnProject/controllers/BooksController.class
+com/promineotech/mvnProject/service/AuthorsService.class

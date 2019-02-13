@@ -7,6 +7,6 @@ import com.promineotech.mvnProject.entity.Book;
 
 
 
-public interface LibraryRepository extends CrudRepository<Book, Long> {
+public interface BookRepository extends CrudRepository<Book, Long> {
 	
 	}

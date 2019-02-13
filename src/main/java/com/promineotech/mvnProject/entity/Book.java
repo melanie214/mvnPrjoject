@@ -12,8 +12,8 @@ import javax.persistence.Id;
 public class Book {
 	
 	
-	
 	private Long id; 
+	
 	private String title; 
 	private String author; 
 	private String genre;
