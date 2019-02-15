@@ -4,6 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
@@ -17,6 +21,9 @@ public class Book {
 	private String title; 
 	private String author; 
 	private String genre;
+	
+	@JsonIgnore
+	private User user;
 	
 	
 	@Id
@@ -52,7 +59,15 @@ public class Book {
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}  
-	
-	
+
+	@ManyToOne
+	@JoinColumn(name = "userId")
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 }

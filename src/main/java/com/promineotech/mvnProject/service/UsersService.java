@@ -1,32 +1,48 @@
 package com.promineotech.mvnProject.service;
 
-import com.promineotech.mvnProject.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.promineotech.mvnProject.entity.User;
+import com.promineotech.mvnProject.repository.UserRepository;
+
+
+
+@Service 
 public class UsersService {
-	//create author 
-	//create book
-	//view user account 
-	//approve or deny requests 
-	//view all books checked out with date and late fees
-	//mark fee paid 
-	// create user, register account 
-	// user can log in after registering 
-	// user can check out books 
-	// user can return books 
-	// user is given a late fee, if books are returned late 
-	// user can view check out history 
 	
+	@Autowired
+	UserRepository repo; 
 	
-	//create author 
-	public User createAuthor(User author) {
-		return repo.save(author); 
+	public User getUser(Long id) {
+		return repo.findOne(id);
 	}
 	
-	//create book 
-	public User createBook(User book) {
-		return repo.save(book);
+	public Iterable<User> getUsers() {
+		return repo.findAll();
+		
 	}
 	
+	public void deleteUser(Long id) {
+		repo.delete(id);
+		
+	}
+	
+	public User updateUser(Long id, User user) {
+		User foundUser= repo.findOne(id);
+		if (foundUser != null) {
+			foundUser.setUserName(user.getUserName());
+			foundUser.setPassword(user.getPassword());
+			repo.save(foundUser);
+		}
+		return foundUser;
+	}
+	
+	public User createUser(User user) {
+		return repo.save(user);
+		
+	}
+
 	
 	
 	

@@ -5,13 +5,17 @@ import org.springframework.stereotype.Service;
 
 import com.promineotech.mvnProject.entity.Book;
 import com.promineotech.mvnProject.repository.BookRepository;
+import com.promineotech.mvnProject.repository.UserRepository;
 
 @Service 
 public class BooksService {
 	
 	
 	@Autowired
-	BookRepository repo; 
+	BookRepository repo;
+	
+	@Autowired
+	UserRepository userRepo;
 	
 	public Book getBook(Long id) {
 		return repo.findOne(id);
@@ -39,6 +43,13 @@ public class BooksService {
 	
 	public Book createBook(Book book) {
 		return repo.save(book); 
+	}
+	
+	public Book checkoutBook(Long userId, Long bookId) {
+		Book book = repo.findOne(bookId);
+		book.setUser(userRepo.findOne(userId));
+		repo.save(book);
+		return book;
 	}
 
 }

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.promineotech.mvnProject.entity.Book;
 import com.promineotech.mvnProject.service.BooksService;
 
+
 @RestController
 public class BooksController {
 	
@@ -36,7 +37,7 @@ public class BooksController {
 	}
 	
 	@RequestMapping(value="/books/{id}" , method=RequestMethod.PUT)
-	public Book updateBook(@PathVariable long id, @RequestBody Book book) {
+	public Book updateBook(@PathVariable Long id, @RequestBody Book book) {
 		return service.updateBook(id, book);
 	}
 	
@@ -44,6 +45,5 @@ public class BooksController {
 	public void deleteBook(@PathVariable Long id) {
 		service.deleteBook(id);
 	}
-	
 	
 }
