@@ -1,5 +1,8 @@
 package com.promineotech.mvnProject.service;
 
+import java.sql.Date;
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,8 +51,16 @@ public class BooksService {
 	public Book checkoutBook(Long userId, Long bookId) {
 		Book book = repo.findOne(bookId);
 		book.setUser(userRepo.findOne(userId));
+		book.setDueDate(Date.valueOf(LocalDate.now().plusDays(7)));
 		repo.save(book);
 		return book;
+	}
+	
+	public Book returnBook(Long userId, Long bookId) {
+		Book book = repo.findOne(bookId);
+		book.setUser(null);
+		repo.save(book);
+		return book; 
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.promineotech.mvnProject.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,6 +23,7 @@ public class Book {
 	private String title; 
 	private String author; 
 	private String genre;
+	private Date dueDate;
 	
 	@JsonIgnore
 	private User user;
@@ -68,6 +71,14 @@ public class Book {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+	public Date getDueDate() {
+		return dueDate;
+	}
+
+	public void setDueDate(Date dueDate) {
+		this.dueDate = dueDate;
 	}
 
 }

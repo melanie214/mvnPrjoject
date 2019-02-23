@@ -51,5 +51,12 @@ public class UserController {
 	public Book checkoutBook(@PathVariable Long userId, @PathVariable Long bookId) {
 		return booksService.checkoutBook(userId, bookId);
 	}
+	
+	@RequestMapping(value="/users/{userId}/books/{bookId}", method=RequestMethod.DELETE)
+	public Book returnBook(@PathVariable Long userId, @PathVariable Long bookId) {
+		return booksService.returnBook(userId, bookId);
+	}
+	
+	
 
 }
